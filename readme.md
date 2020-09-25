@@ -55,8 +55,6 @@ $ NODE_ENV=production node app
 
 #### Kubernetes + Google Cloud
 
-See [KUBERNETES.md](https://github.com/joemccann/dillinger/blob/master/KUBERNETES.md)
-
 ### Todos
 
 - Añadir vestaña de productos en la recetas (catidades y calculos para cocina)
