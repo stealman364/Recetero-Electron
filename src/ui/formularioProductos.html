@@ -1,0 +1,34 @@
+<div id="cabecera" class="w-100 row">
+  <div class="form-group col-4">
+    <label id="idProducto" class="invisible"></label>
+    <label id="nombreP" for="usr">Nombre del producto:</label>
+    <input id="nombreProducto" type="text" class="form-control" />
+    <label id="PrecioCompra">Precio de compra:</label>
+    <input
+      id="precioProducto"
+      maxlength="15"
+      step="0.01"
+      min="0"
+      type="number"
+      class="form-control"
+    />
+    <button class="btn btn-primary">Guardar</button>
+  </div>
+  <div class="form-group col-6">
+    <input
+      class="form-control"
+      id="filtroRecetaConProducto"
+      type="text"
+      placeholder="Buscar.."
+    />
+    <label for="exampleFormControlSelect2">Recetas con uso del producto</label>
+    <ul class="list-group" id="recetaConProducto">
+      <!--<li
+                        class="list-group-item d-flex justify-content-between align-items-center"
+                      >
+                        Cras justo odio
+                        <span class="badge badge-primary badge-pill">14</span>
+                      </li>-->
+    </ul>
+  </div>
+</div>

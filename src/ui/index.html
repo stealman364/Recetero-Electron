@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Recetero</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/animate.css/animate.min.css"
+    />
+    <!-- Bootstrap Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+      let $ = require("jquery");
+    </script>
+    <script>
+      require("popper.js");
+    </script>
+    <script>
+      require("bootstrap");
+    </script>
+    <script type="text/javascript" src="../js/paneles.js"></script>
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/paneles.css" />
+    <link rel="stylesheet" href="../css/switch.css" />
+  </head>
+
+  <body style="overflow: hidden">
+    <div class="wrapper unselectable">
+      <!-- Sidebar Holder -->
+      <nav id="sidebar">
+        <script>
+          compositorHTML("sidebar.html", "sidebar");
+        </script>
+      </nav>
+
+      <!-- Page Content Holder -->
+      <div id="content">
+        <nav
+          id="navbarMenu"
+          class="navbar navbar-expand-lg navbar-light bg-light"
+        >
+          <script>
+            compositorHTML("navbarMenu.html", "navbarMenu");
+          </script>
+        </nav>
+
+        <div id="main">
+          <div class="jumbotron text-center hoverable p-4">
+            <div
+              id="recetas"
+              class="paneles animate__animated animate__fadeInRight"
+            >
+              <script>
+                compositorHTML("recetas.html", "recetas");
+              </script>
+            </div>
+            <div
+              id="productos"
+              class="paneles animate__animated animate__fadeInRight"
+            >
+              <script>
+                compositorHTML("productos.html", "productos");
+              </script>
+            </div>
+            <div
+              id="contactame"
+              class="paneles animate__animated animate__fadeInRight"
+            >
+              <script>
+                compositorHTML("contactame.html", "contactame");
+              </script>
+            </div>
+            <div
+              id="composicion"
+              class="paneles animate__animated animate__fadeInRight"
+            >
+              composicion
+            </div>
+            <div id="receta" class="paneles">
+              <form
+                id="formularioRecetas"
+                class="card card-body animate__animated animate__fadeInRight"
+                style="overflow-y: auto; overflow-x: hidden"
+              >
+                <script>
+                  compositorHTML("formularioRecetas.html", "formularioRecetas"); //
+                </script>
+              </form>
+            </div>
+            <div
+              id="productosInfo"
+              class="paneles animate__animated animate__fadeInRight"
+            >
+              <form
+                id="formularioProductos"
+                class="card card-body animate__animated animate__fadeInRight"
+              >
+                <script>
+                  compositorHTML(
+                    "formularioProductos.html",
+                    "formularioProductos"
+                  ); //
+                </script>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../js/app.js"></script>
+  </body>
+</html>

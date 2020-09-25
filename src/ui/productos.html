@@ -1,0 +1,63 @@
+<input
+  class="form-control"
+  id="filtroProductos"
+  type="text"
+  placeholder="Buscar.."
+/>
+<br />
+<div
+  id="listaProductos"
+  style="overflow-y: auto; overflow-x: hidden; padding: 2px"
+>
+  <button
+    class="btn btn-primary"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapseProducto"
+    aria-expanded="false"
+    aria-controls="collapseProducto"
+  >
+    Nuevo producto
+  </button>
+  <div class="collapse" id="collapseProducto">
+    <form id="NuevoProducto">
+      <div class="form-row d-flex w-100 justify-content-between">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Nombre del Producto"
+          />
+        </div>
+        <div class="col">
+          <input
+            type="number"
+            maxlength="15"
+            step="0.01"
+            min="0"
+            class="form-control"
+            placeholder="Precio del producto"
+          />
+        </div>
+        <button type="button" class="btn btn-primary" onclick="nuevoProducto()">
+          Nuevo
+        </button>
+      </div>
+    </form>
+    <br />
+  </div>
+  <table
+    id="tablaProductos"
+    class="table table-bordered table-responsive-md table-striped text-center"
+  >
+    <thead>
+      <tr>
+        <th class="text-center">idProducto</th>
+        <th class="text-center">Producto</th>
+        <th class="text-center">Precio de compra</th>
+        <th class="text-center">Editar Producto</th>
+      </tr>
+    </thead>
+    <tbody id="cuerpoTablaProductos"></tbody>
+  </table>
+</div>

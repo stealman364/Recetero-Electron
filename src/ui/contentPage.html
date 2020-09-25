@@ -1,0 +1,55 @@
+<nav id="navbarMenu" class="navbar navbar-expand-lg navbar-light bg-light">
+  <script>
+    compositorHTML("navbarMenu.html", "navbarMenu");
+  </script>
+</nav>
+
+<div id="main">
+  <div class="jumbotron text-center hoverable p-4">
+    <div id="recetas" class="paneles animate__animated animate__fadeInRight">
+      <script>
+        compositorHTML("recetas.html", "recetas");
+      </script>
+    </div>
+    <div id="productos" class="paneles animate__animated animate__fadeInRight">
+      <script>
+        compositorHTML("productos.html", "productos");
+      </script>
+    </div>
+    <div id="contactame" class="paneles animate__animated animate__fadeInRight">
+      <script>
+        compositorHTML("contactame.html", "contactame");
+      </script>
+    </div>
+    <div
+      id="composicion"
+      class="paneles animate__animated animate__fadeInRight"
+    >
+      composicion
+    </div>
+    <div id="receta" class="paneles">
+      <form
+        id="formularioRecetas"
+        class="card card-body animate__animated animate__fadeInRight"
+        style="overflow-y: auto; overflow-x: hidden"
+      >
+        <script>
+          compositorHTML("formularioRecetas.html", "formularioRecetas"); //
+        </script>
+      </form>
+    </div>
+    <div
+      id="productosInfo"
+      class="paneles animate__animated animate__fadeInRight"
+    >
+      <form
+        id="formularioProductos"
+        class="card card-body animate__animated animate__fadeInRight"
+      >
+        <script>
+          compositorHTML("formularioProductos.html", "formularioProductos"); //
+        </script>
+      </form>
+    </div>
+  </div>
+</div>
