@@ -17,28 +17,28 @@ Contiene
 
 Requiere una serie de proyectos de código abierto para funcionar correctamente:
 
-- [markdown-it] - Markdown parser done right. Fast and easy to extend.
-- [node.js] - evented I/O for the backend
-- [Express] - fast node.js network app framework [@tjholowaychuk]
-- [Electron] - the streaming build system
-- [jQuery] - duh
+- [markdown-it] - Analizador de Markdown bien hecho. Rápido y fácil de extender.
+- [node.js] - E / S con eventos para el backend
+- [Express] - marco de aplicación de red rápido node.js
+- [Electron] - el sistema de construcción de transmisión
+- [jQuery] -
 
 And of course Dillinger itself is open source with a [public repository][dill]
 on GitHub.
 
 ### Installation
 
-Dillinger requires [Node.js](https://nodejs.org/) v4+ to run.
+Requiere [Node.js] (https://nodejs.org/) v4 + para ejecutarse.
 
-Install the dependencies and devDependencies and start the server.
+Instale las dependencias y devDependencies e inicie el servidor.
 
 ```sh
-$ cd dillinger
+$ cd ReceteroElectron
 $ npm install -d
 $ node app
 ```
 
-For production environments...
+Para entornos de producción ...
 
 ```sh
 $ npm install --production
