@@ -1,31 +1,34 @@
 <div id="cabecera" class="w-100 row">
-  <img
-    id="URLRecetaLoad"
-    src="../img/receta_flaticon.png"
-    class="img col-4"
-    alt="Imagen de la receta"
-    style="max-height: 400px"
-  />
-  <div class="col-8 text-center">
-    <label id="idReceta" class="invisible"></label>
-    <label id="nombre" for="usr">Nombre:</label>
-    <input id="nombreReceta" type="text" class="form-control" />
-    <label id="url">URL imagen:</label>
-    <input id="URLReceta" maxlength="255" type="text" class="form-control" />
-    <label for="comment">Descripción:</label>
-    <textarea
-      id="descripcionReceta"
-      class="form-control"
-      rows="5"
-      maxlength="255"
-    ></textarea>
-    <div class="row d-flex justify-content-around mt-5">
-      <div class="switchToggle col-2">
-        <input type="checkbox" id="switch" />
-        <label for="switch">Toggle</label>
-      </div>
-
-      <button class="btn btn-primary col-2">Guardar</button>
+  <div class="switchToggle text-center float-right w-100">
+    <input type="checkbox" id="switch" />
+    <label for="switch" class="float-right">Toggle</label>
+  </div>
+  <div class="w-100 composicionReceta">
+    <img
+      id="URLRecetaLoad"
+      src="../img/receta_flaticon.png"
+      class="img col-4 float-left"
+      alt="Imagen de la receta"
+      style="max-height: 400px"
+    />
+    <div class="col-8 text-center float-right">
+      <label id="idReceta" class="invisible"></label>
+      <label id="nombre" for="usr">Nombre:</label>
+      <input id="nombreReceta" type="text" class="form-control" />
+      <label id="url">URL imagen:</label>
+      <input id="URLReceta" maxlength="255" type="text" class="form-control" />
+      <label for="comment">Descripción:</label>
+      <textarea
+        id="descripcionReceta"
+        class="form-control"
+        rows="5"
+        maxlength="255"
+      ></textarea>
     </div>
+  </div>
+  <div class="w-100">
+    <button class="btn btn-primary align-bottom" style="margin-left: 33.5%">
+      Guardar
+    </button>
   </div>
 </div>

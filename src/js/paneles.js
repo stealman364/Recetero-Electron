@@ -53,6 +53,10 @@ $(document).ready(function () {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
     });
   });
+  $(".close-btn").click(function () {
+    $(".alert").removeClass("show");
+    $(".alert").addClass("hide");
+  });
 });
 
 function reloadFilters() {
@@ -70,6 +74,15 @@ function reloadFilters() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
     });
   });
+}
+function customAlert() {
+  $(".alert").addClass("show");
+  $(".alert").removeClass("hide");
+  $(".alert").addClass("showAlert");
+  setTimeout(function () {
+    $(".alert").removeClass("show");
+    $(".alert").addClass("hide");
+  }, 5000);
 }
 
 function compositorHTML(uihtml, elementID) {
@@ -101,26 +114,32 @@ function addListeners() {
   formularioRecetas.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    const receta = {
-      nombreReceta: nombreReceta.value,
-      descripcionReceta: descripcionReceta.value
-        ? null
-        : descripcionReceta.value,
-      imagenReceta:
-        uRLReceta.value == "../img/receta_flaticon.png"
-          ? null
-          : uRLReceta.value,
-    };
+    if (nombreReceta.value) {
+      const receta = {
+        nombreReceta: nombreReceta.value,
+        descripcionReceta:
+          descripcionReceta.value != "" || descripcionReceta.value != null
+            ? descripcionReceta.value
+            : null,
+        imagenReceta:
+          URLReceta.value == "../img/receta_flaticon.png" ||
+          URLReceta.value == ""
+            ? null
+            : URLReceta.value,
+      };
 
-    if (idReceta.value == "" || idReceta.value === undefined) {
-      await main.createReceta(receta);
+      if (idReceta.value == "" || idReceta.value === undefined) {
+        await main.createReceta(receta);
+      } else {
+        await main.updateReceta(idReceta.value, receta);
+        idReceta.value = "";
+      }
+      await getRecetas();
+      cambiarPanelGeneral("recetas");
+      formularioRecetas.reset();
     } else {
-      await main.updateReceta(idReceta.value, receta);
-      idReceta.value = "";
+      await main.customNotification("No es posible guardar recetas sin nombre");
     }
-    await getRecetas();
-    cambiarPanelGeneral("recetas");
-    formularioRecetas.reset();
   });
   formularioProductos.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -139,5 +158,9 @@ function addListeners() {
     await getProductos();
     cambiarPanelGeneral("productos");
     formularioProductos.reset();
+  });
+
+  document.getElementById("switch").addEventListener("change", (event) => {
+    console.log(document.getElementById("switch").checked);
   });
 }

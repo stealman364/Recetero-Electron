@@ -27,6 +27,7 @@ async function deleteReceta(id) {
     await getRecetas();
   }
 }
+
 //edicion de la receta se encarga de rellenar los datos del formulario
 async function editReceta(id) {
   const receta = await getReceta(id);

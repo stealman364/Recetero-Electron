@@ -26,6 +26,13 @@ async function createReceta(receta) {
   return receta;
 }
 
+async function customNotification(body) {
+  new Notification({
+    title: "Recetero",
+    body: body,
+  }).show();
+}
+
 async function deleteReceta(idReceta) {
   const conn = await getConexion();
   const result = await conn.query(
@@ -122,4 +129,5 @@ module.exports = {
   deleteProducto,
   nuevoProducto,
   getComposicionByIdProduct,
+  customNotification,
 };
